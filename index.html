@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terraphase reference and acronym builders, style guidance, templates, and technical editing resources.">
+  <title>General Terraphase Writing Tools</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #183b4a; background: #f3f7f9; --accent: #176c88; --border: #d6e2e8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+    header { padding: 30px 5vw; background: #dfeff6; border-bottom: 1px solid #c3dce7; }
+    .brand { display: flex; align-items: center; gap: 24px; }
+    .brand img { display: block; width: 210px; max-width: 100%; height: auto; }
+    .company { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #496d7d; margin: 0; }
+    h1 { font-size: clamp(26px, 3vw, 40px); line-height: 1.2; letter-spacing: -.8px; margin: 28px 0 8px; }
+    .intro { margin: 0; color: #4b6c7b; font-size: 16px; line-height: 1.6; }
+    main { width: 100%; flex: 1; padding: 36px 5vw 48px; }
+    section + section { margin-top: 38px; }
+    .section-heading { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+    .section-heading::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+    h2 { margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.3px; }
+    .grid { display: grid; gap: 18px; }
+    .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .resources { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; text-decoration: none; color: inherit; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 25px; min-height: 220px; box-shadow: 0 2px 5px #183b4a04; transition: border-color .15s, box-shadow .15s, transform .15s; }
+    .tools .card { border-top: 3px solid #438aa3; }
+    .card:hover { border-color: #65a1b6; box-shadow: 0 6px 20px #183b4a10; transform: translateY(-2px); }
+    .card:focus-visible { outline: 3px solid #be8628; outline-offset: 4px; }
+    .card h3 { font-size: 19px; line-height: 1.35; margin: 0; letter-spacing: -.2px; }
+    .card p { font-size: 15px; line-height: 1.65; color: #5b7480; margin: 0; }
+    .card .link-label { display: inline-flex; align-items: center; gap: 9px; color: var(--accent); font-size: 14px; font-weight: 600; margin-top: auto; padding-top: 12px; }
+    .link-label svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    footer { padding: 22px 5vw; border-top: 1px solid var(--border); color: #6c8591; font-size: 12px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    @media (max-width: 1150px) { .resources { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { header { padding: 24px 20px; } main { padding: 28px 20px 36px; } .brand { align-items: flex-start; flex-direction: column; gap: 14px; } .brand img { width: 190px; } h1 { margin-top: 24px; } .tools, .resources { grid-template-columns: 1fr; } .card { min-height: 190px; padding: 23px; } footer { padding: 20px; } }
+    @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="Terraphase Engineering Inc.">
+      <p class="company">Terraphase Engineering Inc.</p>
+    </div>
+    <h1>General Terraphase Writing Tools</h1>
+    <p class="intro">Writing tools and technical editing resources in one place.</p>
+  </header>
+  <main>
+    <section aria-labelledby="interactive-heading">
+      <div class="section-heading"><h2 id="interactive-heading">Interactive tools</h2></div>
+      <div class="grid tools">
+        <a class="card" href="Reference_Builder.html">
+          <h3>Reference Builder</h3>
+          <p>Tool for building references – will export references to a word file for copying to report</p>
+          <span class="link-label">Open Reference Builder <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="card" href="Acronym_Tool.html">
+          <h3>Acronym Builder</h3>
+          <p>Tool for building analyzing document for Acronyms – will export acronyms to word file for copying to report</p>
+          <span class="link-label">Open Acronym Builder <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </section>
+    <section aria-labelledby="editing-heading">
+      <div class="section-heading"><h2 id="editing-heading">Technical Editing Resources</h2></div>
+      <div class="grid resources">
+        <a class="card" href="https://terraphase.sharepoint.com/sites/technicalediting/SitePages/Style-Guide.aspx" target="_blank" rel="noopener noreferrer">
+          <h3>Terraphase Style Guide</h3>
+          <p>Terraphase Style Guide</p>
+          <span class="link-label">Open style guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4L10 14M20 14v6H4V4h6"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+        <a class="card" href="https://terraphase.sharepoint.com/sites/technicalediting/TerraphaseTemplates/Forms/AllItems.aspx" target="_blank" rel="noopener noreferrer">
+          <h3>Terraphase Templates</h3>
+          <p>Terraphase Template Files</p>
+          <span class="link-label">Open templates <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4L10 14M20 14v6H4V4h6"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+        <a class="card" href="https://apps.powerapps.com/play/e/default-e063cc03-97c3-4cdc-97ef-72d77cfcc2dc/a/5c2c2293-6e98-4733-8fdf-16f159054418?tenantId=e063cc03-97c3-4cdc-97ef-72d77cfcc2dc&amp;hint=c89bfbf1-ee74-4491-a7af-26c9fb305443&amp;sourcetime=1780536300621" target="_blank" rel="noopener noreferrer">
+          <h3>Terraphase Tech Edit Request Center</h3>
+          <p>Terraphase Tech Editing Request center</p>
+          <span class="link-label">Open request center <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4L10 14M20 14v6H4V4h6"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+        <a class="card" href="https://terraphase.sharepoint.com/sites/technicalediting/SitePages/W.aspx" target="_blank" rel="noopener noreferrer">
+          <h3>Writing Modules</h3>
+          <p>Guides for how to write good</p>
+          <span class="link-label">Open writing modules <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4L10 14M20 14v6H4V4h6"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>Terraphase Engineering Inc.</footer>
+</body>
+</html>
